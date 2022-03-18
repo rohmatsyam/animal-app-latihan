@@ -70,7 +70,7 @@ class CageController extends Controller
                 'code' => 200,
                 'status' => true,
                 'message' => "Succes show cage with id " . $cage->id,
-                'data' => $cage
+                'data' => $cage->with('animal')->find($cage->id)
             ]
         );
     }

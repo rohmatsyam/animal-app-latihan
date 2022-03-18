@@ -72,7 +72,7 @@ class AnimalController extends Controller
             'code' => 200,
             'status' => true,
             'message' => "Success get animal with id = " . $animal->id,
-            'data' => $animal
+            'data' => $animal->with('cage')->find($animal->id)
         ]);
     }
 

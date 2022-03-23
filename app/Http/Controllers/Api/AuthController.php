@@ -78,12 +78,12 @@ class AuthController extends Controller
 
     public function verify($userId, Request $request)
     {
-        if ($request->hasValidSignature()) {
-            return response()->json([
-                'code' => 422,
-                'message' => 'Invalid signature'
-            ], 422);
-        }
+        // if ($request->hasValidSignature()) {
+        //     return response()->json([
+        //         'code' => 422,
+        //         'message' => 'Invalid signature'
+        //     ], 422);
+        // }
 
         $user = User::findOrFail($userId);
 
